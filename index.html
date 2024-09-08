@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="light-mode">
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <h1>Age Calculator</h1>
+            <select class="theme-button" onchange="switchTheme(this.value)">
+                <option value="light-mode">Light Theme</option>
+                <option value="dark-mode">Dark Theme</option>
+                <option value="blue-mode">Blue Theme</option>
+                <option value="green-mode">Green Theme</option>
+                <option value="purple-mode">Purple Theme</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Sidebar/Calculator Area -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h2>Calculator</h2>
+                <label for="dob">Enter your date of birth:</label>
+                <input type="date" id="dob" aria-label="Date of Birth" required>
+                <button onclick="calculateAge()">Calculate Age</button>
+                <button onclick="printResult()">Print Result</button>
+            </div>
+        </aside>
+
+        <!-- Main Content/Result Display -->
+        <main class="content">
+            <div id="error" class="error-message" style="display: none;"></div>
+            <div id="age-result" class="result-card"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
